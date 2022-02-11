@@ -1,0 +1,14 @@
+.categories {
+    margin-top: 3rem;
+    padding-left: 32px;
+    padding-right: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories a {
+    color: #000;
+    text-decoration: none;
+}
+
+

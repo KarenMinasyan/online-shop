@@ -1,0 +1,10 @@
+{
+  "header": {
+    "search": "I wont to buy...",
+    "favorites": "Favorites"
+  },
+  "currency": "AMD",
+  "footer": {
+    "copyright": "SAS group {{dateNow}}. All rights reserved"
+  }
+}

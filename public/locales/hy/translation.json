@@ -1,0 +1,10 @@
+{
+  "header": {
+    "search": "Ցանկանում եմ գնել...",
+    "favorites": "Նախընտրածներ"
+  },
+  "currency": "ԴՐԱՄ",
+  "footer": {
+    "copyright": "SAS group {{dateNow}}. Բոլոր իրավունքները պաշտպանված են"
+  }
+}

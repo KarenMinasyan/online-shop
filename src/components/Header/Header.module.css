@@ -1,0 +1,47 @@
+header {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #8d9299;
+  margin-bottom: 1rem;
+}
+
+header > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+header > a {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 138px;
+  height: 58px;
+}
+
+.favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+}
+
+.favorites a {
+  text-decoration: none;
+}
+
+.favorites a:visited {
+  color: #000;
+}
+
+
+.favorites:hover, .favorites:hover a {
+  color: #2277cc;
+}
+
+.favorites i {
+  font-size: 24px;
+}

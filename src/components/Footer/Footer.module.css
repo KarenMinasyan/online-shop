@@ -1,0 +1,11 @@
+.footer {
+    max-width: 1900px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-top: 1px solid #8d9299;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f9fb;
+}

@@ -1,0 +1,14 @@
+.lang {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+
+.lang p {
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.lang p:hover {
+    color: var(--color-active)
+}

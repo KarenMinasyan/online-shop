@@ -1,0 +1,21 @@
+.search {
+  margin-left: 8rem;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid rgba(0,0,0, 0.4);
+  padding: 0.5rem 1rem;
+}
+
+.search > div {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  background: transparent;
+  outline: none;
+  color: #000;
+  margin-left: 0.5rem;
+  border: none;
+}

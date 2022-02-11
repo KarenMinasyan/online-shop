@@ -1,0 +1,49 @@
+nav > button {
+  padding-left: 32px;
+}
+
+.sidebar  ul {
+  list-style-type: none;
+  padding: 0;
+  display: none;
+  animation: menu 0.4s;
+}
+
+.sidebar  ul.show {
+  display: block;
+}
+
+.sidebar  ul li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar  ul li a {
+  padding: 0.5rem;
+  display: block;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  font-size: 20px;
+  text-align: right;
+}
+
+.sidebar  ul li a:hover,
+.sidebar  ul li a.active {
+   border-color: red;
+   background-color: var(--color-active);
+ }
+
+.sidebar > button {
+  background-color: transparent;
+  border: none;
+  color: gray;
+  font-size: 30px;
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

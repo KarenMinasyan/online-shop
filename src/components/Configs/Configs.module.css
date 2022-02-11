@@ -1,0 +1,11 @@
+.container {
+    max-width: 1900px;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 2.5rem;
+    background-color: #f6f9fb;
+    border-bottom: 1px solid #8d9299;
+    display: flex;
+    justify-content: flex-end;
+}
+

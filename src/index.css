@@ -1,3 +1,7 @@
+:root {
+  --color-active: #27c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-size: 16px;
+  background: #fff; /* ես գույնից եմ գռադիենտ գնում մենյուից */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  color: #8d9299;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.active {
+  color: var(--color-active)
+}
+
+button {
+  cursor: pointer;
 }
