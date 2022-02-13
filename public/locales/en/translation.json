@@ -1,7 +1,12 @@
 {
   "header": {
     "search": "I wont to buy...",
-    "favorites": "Favorites"
+    "favorites": "Favorites",
+    "cart": "Cart",
+    "menu": "Menu"
+  },
+  "cart": {
+    "total": "Total amount"
   },
   "currency": "AMD",
   "footer": {

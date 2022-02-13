@@ -1,8 +1,4 @@
 import React, { lazy } from 'react';
-import Login from "./pages/Auth/Login/Login";
-import Register from "./pages/Auth/Register/Register";
-import Favorites from "./pages/Favorites/Favorites";
-import CategorySingle from "./pages/Categories/CategorySingle/CategorySingle";
 
 const Home = lazy(() => import('./pages/Home/Home'));
 const AlcoholDrinks = lazy(() => import('./pages/AlcoholDrinks/AlcoholDrinks'));
@@ -10,6 +6,11 @@ const Drinks = lazy(() => import('./pages/Drinks/Drinks'));
 const Fruits = lazy(() => import('./pages/Fruits/Fruits'));
 const Meats = lazy(() => import('./pages/Meats/Meats'));
 const NotFound = lazy(() => import('./components/NotFound/NotFound'));
+const Cart = lazy(() => import('./pages/Cart/Cart'));
+const CategorySingle = lazy(() => import('./pages/Categories/CategorySingle/CategorySingle'));
+const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
+const Register = lazy(() => import('./pages/Auth/Register/Register'));
+const Login = lazy(() => import('./pages/Auth/Login/Login'))
 
 const routes = [
     {
@@ -56,6 +57,11 @@ const routes = [
         path: 'category/:id',
         element: <CategorySingle />,
         key: 'categoryId'
+    },
+    {
+        path: 'cart',
+        element: <Cart />,
+        key: 'cart'
     },
     {
         path: '*',

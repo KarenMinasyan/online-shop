@@ -1,0 +1,42 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    position: relative;
+}
+
+.item span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    right: -5px;
+    top: -8px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.item a:visited {
+    color: #000;
+}
+
+
+.item:hover, .item:hover a {
+    color: #2277cc;
+    cursor: pointer;
+}
+
+.item i {
+    font-size: 30px;
+}
