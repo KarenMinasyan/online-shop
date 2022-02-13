@@ -1,11 +1,15 @@
 header {
   width: 100%;
-  padding: 20px 0px;
+  padding: 5px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #8d9299;
   margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
 }
 .content {
     width: 100%;
@@ -29,28 +33,29 @@ header > a {
   min-width: 90px;
 }
 
-.favorites {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #000;
 }
 
-.favorites a {
+.item a {
   text-decoration: none;
 }
 
-.favorites a:visited {
+.item a:visited {
   color: #000;
 }
 
 
-.favorites:hover, .favorites:hover a {
+.item:hover, .item:hover a {
   color: #2277cc;
+  cursor: pointer;
 }
 
-.favorites i {
-  font-size: 24px;
+.item i {
+  font-size: 30px;
 }
 
 @media screen and (max-width:580px) {

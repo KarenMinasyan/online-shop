@@ -1,12 +1,13 @@
-.bx-menu-alt-left:before, 
-.bx-x:before, 
+.bx-menu-alt-left:before,
+.bx-x:before,
 .bx-chevron-left:before,
 .bx-chevron-right:before {
-    font-size: 50px;
+    font-size: 30px;
 }
+
 @media screen and (max-width:580px) {
-    .bx-menu-alt-left:before, 
-    .bx-x:before, 
+    .bx-menu-alt-left:before,
+    .bx-x:before,
     .bx-chevron-left:before,
     .bx-chevron-right:before {
         font-size: 21px !important;
