@@ -1,10 +1,13 @@
 .wrapper {
-  position: relative;
-  /*height: calc(100vh - 78px);*/
+  width: 100%;
   display: flex;
-  min-height: 514px;
+  justify-content: center;
 }
-
+.content {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
 .wrapper .info {
   position: relative;
   z-index: 1;
@@ -13,11 +16,11 @@
 }
 
 .wrapper .main {
+  width: 85%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  padding-left: 15px;
 }
 
 .wrapper .main::before {
@@ -28,4 +31,11 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+
+@media screen and (max-width:580px) {
+  .content {
+    margin-top: 15px;
+  }
 }

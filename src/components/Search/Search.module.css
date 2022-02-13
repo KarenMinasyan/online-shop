@@ -1,10 +1,10 @@
 .search {
-  margin-left: 8rem;
   display: flex;
   align-items: center;
   border-radius: 30px;
   border: 1px solid rgba(0,0,0, 0.4);
   padding: 0.5rem 1rem;
+  margin-left: 10px;
 }
 
 .search > div {
@@ -18,4 +18,10 @@
   color: #000;
   margin-left: 0.5rem;
   border: none;
+}
+
+@media screen and (max-width: 580px) {
+  .search input {
+    max-width: 90px;
+  }
 }

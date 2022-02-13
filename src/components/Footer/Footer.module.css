@@ -1,11 +1,20 @@
 .footer {
-    max-width: 1900px;
-    padding-left: 32px;
-    padding-right: 32px;
+    width: 100%;
     border-top: 1px solid #8d9299;
     margin-top: 3rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background-color: #f6f9fb;
+}
+.content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width:580px) {
+    .content {
+        font-size: 11px;
+    }
 }

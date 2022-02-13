@@ -32,9 +32,9 @@ const Navbar = ({isSidebarShow, setIsSidebarShow}) => {
     const handleSidebarChange = () => {
         setIsSidebarShow(!isSidebarShow)
     }
-
-    return (
-        <nav className={styles.sidebar} style={{ width: isSidebarShow ? '15%' : '10%' }}>
+    
+    return ( // <nav className={styles.sidebar} style={{ width: isSidebarShow ? '15%' : '10%' }}>
+        <nav className={styles.sidebar}>
             <button onClick={ handleSidebarChange }>
                 <i className={`bx bx-${isSidebarShow ? 'x' : 'menu-alt-left'}`}></i>
             </button>
