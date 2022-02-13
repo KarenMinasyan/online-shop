@@ -1,12 +1,13 @@
 import React, { lazy } from 'react';
 
+
+import Cart from './pages/Cart/Cart';
 const Home = lazy(() => import('./pages/Home/Home'));
 const AlcoholDrinks = lazy(() => import('./pages/AlcoholDrinks/AlcoholDrinks'));
 const Drinks = lazy(() => import('./pages/Drinks/Drinks'));
 const Fruits = lazy(() => import('./pages/Fruits/Fruits'));
 const Meats = lazy(() => import('./pages/Meats/Meats'));
 const NotFound = lazy(() => import('./components/NotFound/NotFound'));
-const Cart = lazy(() => import('./pages/Cart/Cart'));
 const CategorySingle = lazy(() => import('./pages/Categories/CategorySingle/CategorySingle'));
 const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
 const Register = lazy(() => import('./pages/Auth/Register/Register'));
