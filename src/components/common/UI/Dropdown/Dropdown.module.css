@@ -56,6 +56,11 @@ i {
     font-size: 24px;
 }
 
+@media screen and (max-width:580px) {
+    .dropdownBtn, .dropdownItem {
+        padding: 10px 10px 10px 5px;
+    }
+}
 
 @keyframes menu {
     from {

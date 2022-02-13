@@ -3,6 +3,7 @@ import Login from "./pages/Auth/Login/Login";
 import Register from "./pages/Auth/Register/Register";
 import Favorites from "./pages/Favorites/Favorites";
 import CategorySingle from "./pages/Categories/CategorySingle/CategorySingle";
+
 const Home = lazy(() => import('./pages/Home/Home'));
 const AlcoholDrinks = lazy(() => import('./pages/AlcoholDrinks/AlcoholDrinks'));
 const Drinks = lazy(() => import('./pages/Drinks/Drinks'));

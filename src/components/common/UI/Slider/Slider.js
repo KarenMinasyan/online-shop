@@ -29,6 +29,7 @@ const Slider = ({options}) => {
                     style={{transform: `translateX(${slider}% )`}}
                 >
                     <img
+                        className={styles.slide__img}
                         src={item.imgUrl}
                         alt={item.name}
                     />

@@ -1,5 +1,5 @@
 nav > button {
-  padding-left: 32px;
+  /* padding-left: 32px; */
 }
 
 .sidebar  ul {
@@ -10,7 +10,10 @@ nav > button {
 }
 
 .sidebar  ul.show {
-  display: block;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .sidebar  ul li {
@@ -18,12 +21,10 @@ nav > button {
 }
 
 .sidebar  ul li a {
-  padding: 0.5rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
   display: block;
   text-decoration: none;
-  border-left: 4px solid transparent;
-  font-size: 20px;
-  text-align: right;
+  font-size: 19px;
 }
 
 .sidebar  ul li a:hover,
@@ -38,7 +39,17 @@ nav > button {
   color: gray;
   font-size: 30px;
 }
-
+@media screen and (max-width:580px) {
+  .sidebar  ul.show {
+    min-width: 90px;
+  }
+  .sidebar  ul li a {
+    padding: 0;
+    border-left: 0px solid transparent;
+    font-size: 13px;
+    text-align: left;
+  }
+}
 @keyframes menu {
   from {
     opacity: 0;
