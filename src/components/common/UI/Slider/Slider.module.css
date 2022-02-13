@@ -29,6 +29,8 @@
     transition: 0.5s;
     cursor: pointer;
     border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .goLeft:hover,
@@ -42,11 +44,6 @@
 
 .goRight {
     right: 0;
-}
-
-.slider-img {
-    width: 100%;
-    height: auto;
 }
 
 .slider i {

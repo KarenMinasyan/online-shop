@@ -1,0 +1,38 @@
+.table {
+    width: 70%;
+    height: auto;
+    border-collapse: collapse;
+}
+
+.table tr {
+    border-top: 1px solid #8d9299;
+    border-bottom: 1px solid #8d9299;
+}
+
+.table td {
+    padding: 5px 10px;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+
+.imgContainer img {
+    height: 180px;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.table i {
+    color: #8d9299;
+    cursor: pointer;
+}
+
+table i:hover {
+   color: red;
+}

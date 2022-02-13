@@ -2,9 +2,22 @@
   display: flex;
   align-items: center;
   border-radius: 30px;
-  border: 1px solid rgba(0,0,0, 0.4);
+  border: 2px solid rgba(0,0,0, 0.4);
   padding: 0.5rem 1rem;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.search:hover {
+  border-color: #2277cc;
+}
+
+.search i {
+  color: #8d9299;
+}
+
+.search:hover i {
+  color: #2277cc;
 }
 
 .search > div {
@@ -18,6 +31,7 @@
   color: #000;
   margin-left: 0.5rem;
   border: none;
+  min-width: 700px;
 }
 
 @media screen and (max-width: 580px) {

@@ -4,18 +4,30 @@ import {useEffect, useState} from "react";
 import {fetchProducts} from "../../redux/ducks/productsDuck";
 import styles from './Products.module.css';
 import Button from "../../components/common/UI/Button/Button";
-import {useTranslation} from "react-i18next";
-
+import { cartSelector, languageSelector, productsSelector } from "../../helpers/reduxSelectors";
+import { fetchProducts } from "../../redux/ducks/productsDuck";
+import { addCart } from '../../redux/ducks/cartDuck';
+import styles from './Products.module.css';
 
 const Products = () => {
-    const dispatch = useDispatch();
-    const { products } = useSelector(productsSelector);
-    const { currentLanguage } = useSelector(languageSelector);
-    const { t } = useTranslation();
+    const dispatch = useDispatch()
+    const { products } = useSelector(productsSelector)
+    const { currentLanguage } = useSelector(languageSelector)
+    const { cartItems } = useSelector(cartSelector)
+    const {t} = useTranslation()
 
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])
+
+    useEffect(() => {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems))
+    }, [cartItems])
+
+    const addToCart = (product) => {
+        dispatch(addCart(product))
+    }
+
     return (
         <>
             <div className={styles.products}>
@@ -35,7 +47,7 @@ const Products = () => {
                                 <p>{item.price} {t('currency')}</p>
                             </div>
 
-                            <Button cb={() => console.log('add to card')}>
+                            <Button cb={() => addToCart(item)}>
                                 <i className='bx bxs-cart-add'></i>
                                 <span>Add to cart</span>
                             </Button>
