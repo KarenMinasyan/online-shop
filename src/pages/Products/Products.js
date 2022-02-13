@@ -1,12 +1,10 @@
 import {useDispatch, useSelector} from "react-redux";
-import {languageSelector, productsSelector} from "../../helpers/reduxSelectors";
 import {useEffect, useState} from "react";
-import {fetchProducts} from "../../redux/ducks/productsDuck";
-import styles from './Products.module.css';
 import Button from "../../components/common/UI/Button/Button";
 import { cartSelector, languageSelector, productsSelector } from "../../helpers/reduxSelectors";
 import { fetchProducts } from "../../redux/ducks/productsDuck";
 import { addCart } from '../../redux/ducks/cartDuck';
+import { useTranslation } from "react-i18next";
 import styles from './Products.module.css';
 
 const Products = () => {
