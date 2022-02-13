@@ -2,7 +2,7 @@ import {createAction} from "../../helpers/redux";
 
 const SET_USER = 'userDuck/SET_USER'
 
-export const setUser = createAction(SET_USER)
+export const setUser = createAction(SET_USER);
 
 
 const initialState = {

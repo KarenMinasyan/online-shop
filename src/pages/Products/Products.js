@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {languageSelector, productsSelector} from "../../helpers/reduxSelectors";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {fetchProducts} from "../../redux/ducks/productsDuck";
 import styles from './Products.module.css';
 import Button from "../../components/common/UI/Button/Button";
@@ -8,15 +8,14 @@ import {useTranslation} from "react-i18next";
 
 
 const Products = () => {
-    const dispatch = useDispatch()
-    const {products} = useSelector(productsSelector)
-    const {currentLanguage} = useSelector(languageSelector)
-    const {t} = useTranslation()
+    const dispatch = useDispatch();
+    const { products } = useSelector(productsSelector);
+    const { currentLanguage } = useSelector(languageSelector);
+    const { t } = useTranslation();
 
     useEffect(() => {
         dispatch(fetchProducts())
     }, [])
-
     return (
         <>
             <div className={styles.products}>
