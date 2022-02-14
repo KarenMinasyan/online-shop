@@ -18,7 +18,7 @@ const initialState = {
     products: []
 }
 
-const ProductsDuck = (state = initialState, {type, payload}) => {
+const ProductsDuck = (state = initialState, {type, payload}) => { 
     switch (type) {
         case SET_PRODUCTS:
             return {
@@ -26,8 +26,9 @@ const ProductsDuck = (state = initialState, {type, payload}) => {
                 products: payload
             }
         case FELTER_PRODUCTS:
-            const { products } = state;
-            const felteredProducts = products.filter((item) => item.name_en.includes(payload) || item.name_hy.includes(payload));
+            const { value, products } = payload;
+            const felteredProducts = products.filter(item => item.name_en.includes(value) || item.name_hy.includes(payload))
+            // const felteredProducts = products.filter((item) => item.name_en.includes(payload) || item.name_hy.includes(payload));
             return {
                 ...state,
                 products: felteredProducts
