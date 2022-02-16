@@ -6,40 +6,38 @@ import { setTypeProducts } from '../../redux/ducks/productsDuck';
 import { useNavigate, useLocation } from "react-router-dom";
 import styles from './Search.module.css';
 
-let constantsProducts = { products:[], isproducts:true };
 
 const Search = () => {
     const { t } = useTranslation()
-    const [ searchValue, setSearchValue ] = useState('');
     const { products } = useSelector(productsSelector);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
-    
+    const [ searchValue, setSearchValue ] = useState(location.search.slice(7, location.search.length));
+    const [ constantsProducts, setConstantsProducts ] = useState({ products:[], isproducts:true})
+
     const changeSearchValue = (event) => {
         const { target:{value} } = event;
-        navigate(`/?${value}`);
         setSearchValue(value);
+        navigate(value ? `/?value=${value}` : '/?');
     };
-    useEffect(() => {
-        const value = location.search.slice(1, location.search.length);
-        setSearchValue(value);
-    }, [searchValue]);
-    
-    useEffect(() => {
-        const { products } = constantsProducts;
-        const value = location.search.slice(1, location.search.length);
-        dispatch(setTypeProducts({value:value, products}));
-    }, [searchValue]);
 
     useEffect(() => {
         if(constantsProducts.isproducts){
             if(products.length) {
-                constantsProducts.products = products;
-                constantsProducts.isproducts = false;
-            }
-        }
-    }, [searchValue]);
+                setConstantsProducts({ products, isproducts:false });
+            };
+        };
+    }, [products]);
+    
+    useEffect(() => {
+        const { products } = constantsProducts;
+        const value = location.search.slice(7, location.search.length);
+        console.log(value)
+        dispatch(setTypeProducts({value:value, products}));
+    }, [searchValue, constantsProducts]);
+
+    
     return (
         <div className={styles.search}>
             <div>
