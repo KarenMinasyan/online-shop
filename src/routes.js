@@ -11,7 +11,6 @@ const NotFound = lazy(() => import('./components/NotFound/NotFound'));
 const CategorySingle = lazy(() => import('./pages/Categories/CategorySingle/CategorySingle'));
 const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
 const Register = lazy(() => import('./pages/Auth/Register/Register'));
-const Login = lazy(() => import('./pages/Auth/Login/Login'))
 
 const routes = [
     {
@@ -38,11 +37,6 @@ const routes = [
         path: 'meats',
         element: <Meats />,
         key: 'meats'
-    },
-    {
-        path: 'login',
-        element: <Login />,
-        key: 'login'
     },
     {
         path: 'register',

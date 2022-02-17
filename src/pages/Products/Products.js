@@ -1,12 +1,12 @@
-import {useDispatch, useSelector} from "react-redux";
-import {Fragment, useEffect, useState} from "react";
-import Button from "../../components/common/UI/Button/Button";
-import { cartSelector, languageSelector, productsSelector } from "../../helpers/reduxSelectors";
-import { fetchProducts } from "../../redux/ducks/productsDuck";
+import { useEffect } from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import Button from '../../components/common/UI/Button/Button';
+import Continer from '../../components/Continer/Continer';
+import { cartSelector, languageSelector, productsSelector } from '../../helpers/reduxSelectors';
+import { fetchProducts } from '../../redux/ducks/productsDuck';
 import { addCart } from '../../redux/ducks/cartDuck';
-import { useTranslation } from "react-i18next";
 import styles from './Products.module.css';
-import Continer from "../../components/Continer/Continer";
 
 const Products = () => {
     const dispatch = useDispatch()

@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 672px;
+    box-shadow: 0 1px 5px rgba(26, 36, 51, 0.5);
+    padding: 32px 32px 36px;
+    margin: 20px 0 0;
+}
+
+.wrapper > input {
+    margin-bottom: 1rem;
+    width: 300px;
+    height: 46px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #8d9299;
+    padding: 0 0.5rem;
+}
+
+.form > input:focus {
+    border-color: #2277cc;
+}
+
+.wrapper > input:first-child {
+    margin-right: 32px;
+}

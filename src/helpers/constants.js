@@ -25,21 +25,6 @@ export const AUTH = [
     }
 ]
 
-export const ACCOUNT = [
-    {
-        to: 'info',
-        name_en: 'Personal Information',
-        name_hy: 'Անձնական տվյալներ',
-        key: 'info'
-    },
-    {
-        to: 'logout',
-        name_en: 'Logout',
-        name_hy: 'Դուրս գալ',
-        key: 'logout'
-    }
-]
-
 export const SLIDER = [
     {
         imgUrl: 'https://www.sas.am/upload/Sh/imageCache/102/403/4034093736902112.jpg.webp',

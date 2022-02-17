@@ -1,10 +1,9 @@
-import SignUp from "../../../components/Auth/SignUp";
+import SignUp from '../../../components/Auth/SignUp/SignUp';
 
 
 const Register = () => {
     return (
         <>
-            <p>Register</p>
             <SignUp />
         </>
     )
