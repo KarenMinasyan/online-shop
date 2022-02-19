@@ -1,15 +1,13 @@
-import Categories from "../Categories/Categories";
-import Products from "../Products/Products";
+import Categories from '../Categories/Categories';
+import Products from '../Products/Products';
 
 const Home = () => {
-
-    return (
-        <>
-            <Categories />
-            <Products />
-        </>
-
-    )
-}
+	return (
+		<>
+			<Categories />
+			<Products />
+		</>
+	);
+};
 
 export default Home;

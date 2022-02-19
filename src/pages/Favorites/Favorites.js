@@ -1,11 +1,5 @@
-import {NavLink} from "react-router-dom";
-
 const Favorites = () => {
-    return (
-       <>
-           favorites
-       </>
-    )
-}
+	return <>favorites</>;
+};
 
 export default Favorites;
