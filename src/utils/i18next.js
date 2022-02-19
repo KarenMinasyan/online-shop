@@ -8,12 +8,12 @@ i18next
     .use(I18nextBrowserLanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLng: "en",
+        fallbackLng: 'en',
         supportedLngs: ['en', 'hy'],
         detection: {
             order: ['localStorage'],
-            caches: ['localStorage']
+            caches: ['localStorage'],
         },
-    })
+    });
 
 export default i18next;

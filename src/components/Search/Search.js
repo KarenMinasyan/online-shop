@@ -33,7 +33,6 @@ const Search = () => {
     useEffect(() => {
         const { products } = constantsProducts;
         const value = location.search.slice(7, location.search.length);
-        console.log(value)
         dispatch(setTypeProducts({value:value, products}));
     }, [searchValue, constantsProducts]);
 
