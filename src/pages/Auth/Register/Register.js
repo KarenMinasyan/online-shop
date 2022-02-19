@@ -1,12 +1,11 @@
 import SignUp from '../../../components/Auth/SignUp/SignUp';
 
-
 const Register = () => {
-    return (
-        <>
-            <SignUp />
-        </>
-    )
-}
+	return (
+		<>
+			<SignUp />
+		</>
+	);
+};
 
 export default Register;
