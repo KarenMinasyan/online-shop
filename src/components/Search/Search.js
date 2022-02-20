@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from 'react-redux';
 import { productsSelector } from '../../helpers/reduxSelectors';
 import { setTypeProducts } from '../../redux/ducks/productsDuck';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useMatch } from "react-router-dom";
 import styles from './Search.module.css';
 
 
@@ -13,13 +13,13 @@ const Search = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const location = useLocation();
-    const [ searchValue, setSearchValue ] = useState(location.search.slice(7, location.search.length));
+    const [ searchValue, setSearchValue ] = useState(location.search.slice(8, location.search.length));
     const [ constantsProducts, setConstantsProducts ] = useState({ products:[], isproducts:true})
 
     const changeSearchValue = (event) => {
         const { target:{value} } = event;
         setSearchValue(value);
-        navigate(value ? `/?value=${value}` : '/?');
+        navigate(value ? `/?search=${value + ""}` : '/?');
     };
 
     useEffect(() => {
@@ -32,9 +32,7 @@ const Search = () => {
     
     useEffect(() => {
         const { products } = constantsProducts;
-        const value = location.search.slice(7, location.search.length);
-        console.log(value)
-        dispatch(setTypeProducts({value:value, products}));
+        dispatch(setTypeProducts({value:searchValue, products}));
     }, [searchValue, constantsProducts]);
 
     

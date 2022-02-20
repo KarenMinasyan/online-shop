@@ -27,8 +27,11 @@ const ProductsDuck = (state = initialState, {type, payload}) => {
             }
         case FELTER_PRODUCTS:
             const { value, products } = payload;
-            const felteredProducts = products.filter(item => item.name_en.includes(value) || item.name_hy.includes(payload))
-            // const felteredProducts = products.filter((item) => item.name_en.includes(payload) || item.name_hy.includes(payload));
+            const felteredProducts = products.filter((item) => {
+                if(item.name_en.includes(value) || item.name_hy.includes(value)){
+                    return true
+                }
+            })
             return {
                 ...state,
                 products: felteredProducts
