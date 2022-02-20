@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form > input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 300px;
+    height: 46px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid #8d9299;
+    padding: 0 0.5rem;
+}
+
+.form > input:focus {
+    border-color: #2277cc;
+}

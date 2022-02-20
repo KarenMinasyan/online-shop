@@ -6,11 +6,11 @@ import ProductsDuck from './ducks/productsDuck';
 import CartDuck from './ducks/cartDuck';
 
 const rootReducer = combineReducers({
-    AppDuck,
-    UserDuck,
-    CategoriesDuck,
-    ProductsDuck,
-    CartDuck
-})
+	AppDuck,
+	UserDuck,
+	CategoriesDuck,
+	ProductsDuck,
+	CartDuck,
+});
 
 export default rootReducer;

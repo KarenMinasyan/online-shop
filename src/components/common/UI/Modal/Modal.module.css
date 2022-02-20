@@ -1,0 +1,53 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px;
+    z-index: 9999;
+    max-width: 400px;
+    animation: modal-anim 1s;
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.close {
+    border: none;
+    background: transparent;
+    float: right;
+}
+
+.close:hover {
+    color: #2277cc;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.link:hover {
+    color: #2277cc;
+}
+
+@keyframes modal-anim {
+    from {
+
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}

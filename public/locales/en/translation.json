@@ -3,10 +3,17 @@
     "search": "I wont to buy...",
     "favorites": "Favorites",
     "cart": "Cart",
-    "menu": "Menu"
+    "menu": "Menu",
+    "logout": "Log out",
+    "login": "Log in"
   },
   "cart": {
     "total": "Total amount"
+  },
+  "auth": {
+    "email": "email",
+    "password": "password",
+    "register": "Register"
   },
   "currency": "AMD",
   "footer": {

@@ -6,23 +6,27 @@ import { LANGUAGES } from '../../helpers/constants';
 import styles from './Lang.module.css';
 
 const Lang = () => {
-    const dispatch = useDispatch()
-    const { currentLanguage } = useSelector(languageSelector)
+	const dispatch = useDispatch();
+	const { currentLanguage } = useSelector(languageSelector);
 
-    const handleLanguageChange = e => {
-        changeLanguage(e)
-        dispatch(setLanguage(e))
-    }
+	const handleLanguageChange = (e) => {
+		changeLanguage(e);
+		dispatch(setLanguage(e));
+	};
 
-    return (
-            <div className={ styles.lang }>
-                {
-                    currentLanguage === 'hy'
-                        ? <p onClick={ () => handleLanguageChange(LANGUAGES[0].code)}>{LANGUAGES[0].name }</p>
-                        : <p onClick={ () => handleLanguageChange(LANGUAGES[1].code)}>{LANGUAGES[1].name }</p>
-                }
-            </div>
-    )
-}
+	return (
+		<div className={styles.lang}>
+			{currentLanguage === 'hy' ? (
+				<p onClick={() => handleLanguageChange(LANGUAGES[0].code)}>
+					{LANGUAGES[0].name}
+				</p>
+			) : (
+				<p onClick={() => handleLanguageChange(LANGUAGES[1].code)}>
+					{LANGUAGES[1].name}
+				</p>
+			)}
+		</div>
+	);
+};
 
 export default Lang;
