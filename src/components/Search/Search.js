@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { productsSelector } from '../../helpers/reduxSelectors';
 import { setTypeProducts } from '../../redux/ducks/productsDuck';
-import { useNavigate, useLocation, useMatch } from "react-router-dom";
 import styles from './Search.module.css';
 
 const Search = () => {
@@ -29,7 +28,7 @@ const Search = () => {
             };
         };
     }, [products]);
-    
+
     useEffect(() => {
         const { products } = constantsProducts;
         dispatch(setTypeProducts({value:searchValue, products}));

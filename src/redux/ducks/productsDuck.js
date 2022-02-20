@@ -19,27 +19,27 @@ const initialState = {
 	products: [],
 };
 
-const ProductsDuck = (state = initialState, {type, payload}) => { 
-    switch (type) {
-        case SET_PRODUCTS:
-            return {
-                ...state,
-                products: payload
-            }
-        case FELTER_PRODUCTS:
-            const { value, products } = payload;
-            const felteredProducts = products.filter((item) => {
-                if(item.name_en.includes(value) || item.name_hy.includes(value)){
-                    return true
-                }
-            })
-            return {
-                ...state,
-                products: felteredProducts
-            }
-        default:
-            return state
-    }
-}
+const ProductsDuck = (state = initialState, { type, payload }) => {
+	switch (type) {
+		case SET_PRODUCTS:
+			return {
+				...state,
+				products: payload,
+			};
+		case FILTER_PRODUCTS:
+			const { value, products } = payload;
+			const felteredProducts = products.filter((item) => {
+				if (item.name_en.includes(value) || item.name_hy.includes(value)) {
+					return true;
+				}
+			});
+			return {
+				...state,
+				products: felteredProducts,
+			};
+		default:
+			return state;
+	}
+};
 
 export default ProductsDuck;
