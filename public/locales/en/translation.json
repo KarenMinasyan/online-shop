@@ -17,6 +17,7 @@
   },
   "addToCart": "Add to cart",
   "back": "Back",
+  "favorite": "Favorite",
   "currency": "AMD",
   "footer": {
     "copyright": "SAS group {{dateNow}}. All rights reserved"

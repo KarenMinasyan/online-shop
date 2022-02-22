@@ -10,6 +10,9 @@ const NotFound = lazy(() => import('./components/NotFound/NotFound'));
 const CategorySingle = lazy(() =>
 	import('./pages/Categories/CategorySingle/CategorySingle')
 );
+const ProductSingle = lazy(() =>
+	import('./pages/Products/ProductSingle/ProductSingle')
+);
 const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
 const Register = lazy(() => import('./pages/Auth/Register/Register'));
 
@@ -53,6 +56,11 @@ const routes = [
 		path: 'category/:id',
 		element: <CategorySingle />,
 		key: 'categoryId',
+	},
+	{
+		path: 'product/:id',
+		element: <ProductSingle />,
+		key: 'productId',
 	},
 	{
 		path: 'cart',

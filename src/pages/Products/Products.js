@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from '../../components/common/UI/Card/Card';
 import Continer from '../../components/Continer/Continer';
@@ -24,7 +25,9 @@ const Products = () => {
 			<Continer>
 				<div className={styles.content}>
 					{products.map((item) => (
-						<Card props={item} key={item.id} />
+						<NavLink key={item.id} to={`product/${item.id}`}>
+							<Card props={item} key={item.id} />
+						</NavLink>
 					))}
 				</div>
 			</Continer>
