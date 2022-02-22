@@ -1,14 +1,23 @@
 import { createAction } from '../../helpers/redux';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import {
+	collection,
+	doc,
+	getDoc,
+	getDocs,
+	query,
+	where,
+} from 'firebase/firestore';
 import fireDB from '../../firebase';
 
 const SET_PRODUCTS = 'productsDuck/SET_PRODUCTS';
 const FILTER_PRODUCTS = 'productsDuck/FILTER_PRODUCTS';
 const SET_PRODUCTS_BY_ID = 'productsDuck/SET_PRODUCTS_BY_ID';
+const SET_CURRENT_PRODUCT = 'productsDuck/SET_CURRENT_PRODUCT';
 
 export const setProducts = createAction(SET_PRODUCTS);
 export const setTypeProducts = createAction(FILTER_PRODUCTS);
 export const setProductsById = createAction(SET_PRODUCTS_BY_ID);
+export const setCurrentProduct = createAction(SET_CURRENT_PRODUCT);
 
 export const fetchProducts = (payload) => async (dispatch) => {
 	let productsArray = [];
@@ -31,9 +40,15 @@ export const fetchProductsById = (id) => async (dispatch) => {
 	dispatch(setProductsById(productsArray));
 };
 
+export const fetchCurrentProduct = (id) => async (dispatch) => {
+	const productCurrent = await getDoc(doc(fireDB, 'products', id));
+	dispatch(setCurrentProduct(productCurrent.data()));
+};
+
 const initialState = {
 	products: [],
 	productsById: [],
+	currentProduct: [],
 };
 
 const ProductsDuck = (state = initialState, { type, payload }) => {
@@ -58,6 +73,11 @@ const ProductsDuck = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				productsById: payload,
+			};
+		case SET_CURRENT_PRODUCT:
+			return {
+				...state,
+				currentProduct: payload,
 			};
 		default:
 			return state;

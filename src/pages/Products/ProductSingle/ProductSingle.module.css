@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+
+.btnWrapper {
+    max-width: 300px;
+}

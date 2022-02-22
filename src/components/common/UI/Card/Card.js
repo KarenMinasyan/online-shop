@@ -10,7 +10,8 @@ const Card = ({ props }) => {
 	const { currentLanguage } = useSelector(languageSelector);
 	const { t } = useTranslation();
 
-	const addToCart = (product) => {
+	const addToCart = (e, product) => {
+		e.preventDefault();
 		dispatch(addCart(product));
 	};
 
@@ -31,7 +32,7 @@ const Card = ({ props }) => {
 				</p>
 			</div>
 
-			<Button cb={() => addToCart(props)}>
+			<Button cb={(e) => addToCart(e, props)}>
 				<i className='bx bxs-cart-add'></i>
 				<span>{t('addToCart')}</span>
 			</Button>

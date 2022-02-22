@@ -1,0 +1,38 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+}
+
+.container img {
+    height: 100%;
+}
+
+.container h2 {
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8d9299;
+}
+
+.price {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.favorite {
+    font-size: 20px;
+    color: #2277cc;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.favorite i {
+    margin-right: 0.5rem;
+    font-size: 24px;
+}
+
+.description {
+    max-width: 600px;
+}
