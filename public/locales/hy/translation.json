@@ -15,6 +15,8 @@
     "password": "Գաղտնաբառ",
     "register": "Գրանցում"
   },
+  "addToCart": "Ավելացնել",
+  "back": "Դեպի հետ",
   "currency": "ԴՐԱՄ",
   "footer": {
     "copyright": "SAS group {{dateNow}}. Բոլոր իրավունքները պաշտպանված են"
