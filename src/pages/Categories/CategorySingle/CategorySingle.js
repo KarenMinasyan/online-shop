@@ -1,32 +1,62 @@
-import { getDoc, doc } from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { languageSelector } from '../../../helpers/reduxSelectors';
-import fireDB from '../../../firebase';
+import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
+import Card from '../../../components/common/UI/Card/Card';
+import Button from '../../../components/common/UI/Button/Button';
+import Continer from '../../../components/Continer/Continer';
+import CategoryItem from '../../../components/CategoryItem/CategoryItem';
+import { fetchCurrentCategory } from '../../../redux/ducks/categiriesDuck';
+import { fetchProductsById } from '../../../redux/ducks/productsDuck';
+import {
+	categoriesSelector,
+	productsSelector,
+} from '../../../helpers/reduxSelectors';
+import styles from './CategorySingle.module.css';
 
 const CategorySingle = () => {
-	const [category, setCategory] = useState();
+	const { productsById } = useSelector(productsSelector);
+	const { currentCategory } = useSelector(categoriesSelector);
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
 	const params = useParams();
-	const { currentLanguage } = useSelector(languageSelector);
+	const { t } = useTranslation();
 
 	useEffect(() => {
-		getCurrentCategory();
-	}, []);
+		getCurrentCategory(params.id);
+		getProductsById(params.id);
+	}, [productsById, currentCategory]);
 
-	const getCurrentCategory = async () => {
-		const categoryCurrent = await getDoc(doc(fireDB, 'categories', params.id));
+	const getCurrentCategory = (id) => {
+		dispatch(fetchCurrentCategory(id));
+	};
 
-		setCategory(categoryCurrent.data());
+	const getProductsById = (id) => {
+		dispatch(fetchProductsById(id));
+	};
+
+	const back = () => {
+		navigate('..');
 	};
 
 	return (
 		<div>
-			{category && (
-				<h1>
-					{currentLanguage === 'hy' ? category.name_hy : category.name_en}
-				</h1>
-			)}
+			<Continer>
+				<div className={styles.topSide}>
+					{currentCategory && <CategoryItem props={currentCategory} />}
+					<div className={styles.topSideWrapper}>
+						<Button cb={back}>
+							<i className='bx bx-arrow-back'></i>
+							<span>{t('back')}</span>
+						</Button>
+					</div>
+				</div>
+
+				<div className={styles.products}>
+					{productsById &&
+						productsById.map((item) => <Card props={item} key={item.id} />)}
+				</div>
+			</Continer>
 		</div>
 	);
 };
