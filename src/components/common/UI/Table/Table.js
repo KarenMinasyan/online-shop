@@ -1,14 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Table.module.css';
 
 const Table = ({ list, cb }) => {
-	const [total, setTotal] = useState(0);
 	const { t } = useTranslation();
-
-	useEffect(() => {
-		setTotal(list.reduce((acc, item) => acc + item.price, 0));
-	}, [list]);
+	const totalPrice = useMemo(
+		() => list.reduce((acc, item) => acc + item.price, 0),
+		[list]
+	);
 
 	return (
 		<>
@@ -34,7 +33,7 @@ const Table = ({ list, cb }) => {
 			}
 
 			<p>
-				{t('cart.total')}: {total} {t('currency')}
+				{t('cart.total')}: {totalPrice} {t('currency')}
 			</p>
 		</>
 	);
