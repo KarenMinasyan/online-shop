@@ -33,7 +33,6 @@ export const fetchProductsById = (id) => async (dispatch) => {
 		query(collection(fireDB, 'products'), where('cat_id', '==', +id))
 	);
 	q.forEach((doc) => {
-		console.log(doc.data());
 		productsArray.push(doc.data());
 	});
 
