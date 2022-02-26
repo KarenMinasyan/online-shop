@@ -9,6 +9,10 @@ const links = [
 		title: 'Home',
 	},
 	{
+		to: 'orders',
+		title: 'Orders',
+	},
+	{
 		to: 'alcohol-drinks',
 		title: 'Alcohol Drinks',
 	},

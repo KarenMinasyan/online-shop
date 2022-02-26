@@ -32,11 +32,17 @@ const Cart = () => {
 	return (
 		<div>
 			<Continer>
-				<Table list={cartItems} cb={deleteFromCard} />
-				<Button cb={() => order(uid, cartItems)}>
-					<i className='bx bx-check'></i>
-					{t('order')}
-				</Button>
+				{cartItems.length ? (
+					<div>
+						<Table list={cartItems} cb={deleteFromCard} />
+						<Button cb={() => order(uid, cartItems)}>
+							<i className='bx bx-check'></i>
+							{t('order')}
+						</Button>
+					</div>
+				) : (
+					<p style={{ textAlign: 'center' }}>Your shopping cart is empty</p>
+				)}
 			</Continer>
 		</div>
 	);
