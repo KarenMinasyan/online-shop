@@ -15,6 +15,7 @@ const ProductSingle = lazy(() =>
 );
 const Favorites = lazy(() => import('./pages/Favorites/Favorites'));
 const Register = lazy(() => import('./pages/Auth/Register/Register'));
+const Orders = lazy(() => import('./pages/Orders/Orders'));
 
 const routes = [
 	{
@@ -66,6 +67,11 @@ const routes = [
 		path: 'cart',
 		element: <Cart />,
 		key: 'cart',
+	},
+	{
+		path: 'orders',
+		element: <Orders />,
+		key: 'orders',
 	},
 	{
 		path: '*',
