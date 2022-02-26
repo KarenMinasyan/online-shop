@@ -1,0 +1,29 @@
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+h3 {
+    margin: 10px;
+    cursor: default;
+}
+
+.fadeIn {
+    animation: fadeInAnim 2s ease infinite;
+}
+
+@keyframes fadeInAnim {
+    from {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
